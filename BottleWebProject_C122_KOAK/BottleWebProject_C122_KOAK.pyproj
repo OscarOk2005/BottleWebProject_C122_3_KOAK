@@ -41,9 +41,12 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="views\daykstara_algorithm_calc.tpl" />
+    <Content Include="static\images\kraskal_step_1.png" />
+    <Content Include="static\images\kraskal_step_2.png" />
+    <Content Include="views\daykstar_algorithm_cal.tpl" />
+    <Content Include="views\daykstar_algorithm_calc.tpl" />
     <Content Include="views\daykstar_algorithm_theory.tpl" />
-    <Content Include="views\floyda_algorithm_calc.tpl" />
+    <Content Include="views\floyd_algorithm_calc.tpl" />
     <Content Include="views\floyd_algorithm_theory.tpl" />
     <Content Include="views\kraskal_algorithm_calc.tpl" />
     <Content Include="views\kraskal_algorithm_theory.tpl" />
@@ -56,8 +59,8 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="static\images\prima_condition.png" />
-    <Content Include="static\images\prima_result.png" />
+    <Content Include="static\images\prima_and_kraskal_condition.png" />
+    <Content Include="static\images\prima_and_kraskal_result.png" />
     <Content Include="static\images\prima_step_1.png" />
     <Content Include="static\images\prima_step_2.png" />
     <Content Include="static\scripts\bootstrap.js" />

@@ -33,3 +33,23 @@ def about():
         message='Your application description page.',
         year=datetime.now().year
     )
+
+@route('/prima_algorithm_theory')
+@view('prima_algorithm_theory')
+def prima_theory():
+    """Renders the Prima algorithm theory page."""
+    return dict(
+            title='Prima\'s algorithm theory',
+            message='Prima\'s algorithm theory',
+            year=datetime.now().year
+        )
+
+@route('/prima_algorithm_calc')
+@view('prima_algorithm_calc')
+def prima_theory():
+    """Renders the Prima algorithm calculator page."""
+    return dict(
+            title='Prima\'s algorithm calculator',
+            message='Prima\'s algorithm calculator',
+            year=datetime.now().year
+        )

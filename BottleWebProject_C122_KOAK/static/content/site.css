@@ -40,3 +40,66 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+body {
+    font-family: Arial, sans-serif !important;
+    background-color: #f5f5f5 !important;
+    color: #333 !important;
+}
+
+.container {
+    max-width: 960px !important;
+}
+
+.theory-block {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+    .theory-block h3 {
+        margin-top: 0;
+        color: #007bff;
+    }
+
+    .theory-block p {
+        line-height: 1.5;
+    }
+
+    .theory-block img {
+        margin: auto;
+        display:block;
+        width:60%;
+    }
+
+pre {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+#pseudocode {
+    display: block;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+pre code::before {
+    display: inline-block;
+    width: 3em;
+    margin-left: -3em;
+    text-align: right;
+    color: #999;
+}
+
+.figure-caption{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}

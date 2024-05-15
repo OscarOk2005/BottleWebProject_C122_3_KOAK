@@ -110,6 +110,28 @@ pre code::before {
     margin-bottom: 20px;
 }
 
+.matrix-input{
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+th{
+    border-top:none;
+    border-left:none;
+    text-align:center;
+    vertical-align:middle!important;
+}
+
+.matrix-input{
+    text-align:center;
+    padding-right:3px;
+}
+
+#matrix_form{
+    margin-bottom:2%;
+}
+
 #content {
     padding: 0 0 60px 0;
 }

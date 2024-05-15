@@ -41,6 +41,12 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\daykstara_algorithm_calc.tpl" />
+    <Content Include="views\daykstar_algorithm_theory.tpl" />
+    <Content Include="views\floyda_algorithm_calc.tpl" />
+    <Content Include="views\floyd_algorithm_theory.tpl" />
+    <Content Include="views\kraskal_algorithm_calc.tpl" />
+    <Content Include="views\kraskal_algorithm_theory.tpl" />
     <Content Include="views\prima_algorithm_calc.tpl" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />

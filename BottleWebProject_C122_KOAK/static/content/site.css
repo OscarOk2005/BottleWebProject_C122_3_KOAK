@@ -1,4 +1,10 @@
+html {
+    height: 100%;
+}
+
 body {
+    position: relative;
+    min-height: 100%;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -102,4 +108,57 @@ pre code::before {
 .figure-caption{
     margin-top: 5px;
     margin-bottom: 20px;
+}
+
+#content {
+    padding: 0 0 60px 0;
+}
+
+.footer {
+    background-color: #428bca;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.footer * {
+    margin: 10px;
+    color: white;
+}
+
+#app_header {
+    background-color: #428bca !important;
+    border-color: #428bca !important;
+}
+
+#color_white {
+    color: white !important;
+}
+.dropdown-toggle {
+    color: white !important;
+}
+
+.dropdown-toggle:default {
+    background-image: none !important;
+    color: white !important;
+}
+
+.dropdown-toggle:focus, .dropdown-toggle:active, .open .dropdown-toggle {
+    background-color: #285E8E !important;
+    background-image: none !important;
+    color: white !important;
+}
+
+#footer_link {
+    color: white;
+}
+
+#footer_link:hover {
+    color: white;
 }

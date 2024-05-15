@@ -86,7 +86,7 @@
         Применить алгоритм Прима для нахождения минимального остовного дерева следующего графа:
     </p>
     <figure class="text-center mb-3">
-      <img src="/static/images/prima_condition.png" class="img-fluid" />
+      <img src="/static/images/prima_and_kraskal_condition.png" class="img-fluid" />
       <figcaption class="figure-caption">
         Исходный граф
       </figcaption>
@@ -137,7 +137,7 @@
       остовное дерево.
     </p>
     <figure class="text-center mb-3">
-      <img src="/static/images/prima_result.png" class="img-fluid" />
+      <img src="/static/images/prima_and_kraskal_result.png" class="img-fluid" />
       <figcaption class="figure-caption">
         Искомое минимальное остовное дерево
       </figcaption>

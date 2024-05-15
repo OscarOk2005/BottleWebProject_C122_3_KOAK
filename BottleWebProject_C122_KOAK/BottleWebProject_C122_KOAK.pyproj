@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="prima_handler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes.py" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +44,8 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\scripts\matrix.js" />
+    <Content Include="views\matrix.tpl" />
     <Content Include="views\prima_algorithm_calc.tpl" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />

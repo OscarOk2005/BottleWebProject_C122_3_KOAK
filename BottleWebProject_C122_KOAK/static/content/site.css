@@ -184,3 +184,7 @@ th{
 #footer_link:hover {
     color: white;
 }
+
+.inputLabel {
+    margin-top: 10px;
+}

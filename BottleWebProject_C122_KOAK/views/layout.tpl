@@ -26,7 +26,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Теория<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/prima_algorithm_theory">Алгоритм Прима</a></li>
-                            <li><a href="/daykstar_algorithm_theory">Алгоритм Дейкстра</a></li>
+                            <li><a href="/daykstra_algorithm_theory">Алгоритм Дейкстры</a></li>
                             <li><a href="/floyd_algorithm_theory">Алгоритм Флойда</a></li>
                             <li><a href="/kraskal_algorithm_theory">Алгоритм Краскала</a></li>
                         </ul>
@@ -35,12 +35,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Калькулятор<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/prima_algorithm_calc">Алгоритм Прима</a></li>
-                            <li><a href="/daykstar_algorithm_calc">Алгоритм Дейкстра</a></li>
+                            <li><a href="/daykstra_algorithm_calc">Алгоритм Дейкстры</a></li>
                             <li><a href="/floyd_algorithm_calc">Алгоритм Флойда</a></li>
                             <li><a href="/kraskal_algorithm_calc">Алгоритм Краскала</a></li>
                         </ul>
                     </li>
-                    <li><a href="/about" id="color_white">Об авторах</a></li>
+                    <li><a href="/daykstra_result" id="color_white">Об авторах</a></li>
                 </ul>
             </div>
         </div>

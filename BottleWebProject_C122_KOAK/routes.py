@@ -25,8 +25,8 @@ def prima_theory():
             year=datetime.now().year
         )
 
-@route('/daykstar_algorithm_theory')
-@view('daykstar_algorithm_theory')
+@route('/daykstra_algorithm_theory')
+@view('daykstra_algorithm_theory')
 def daykstar_theory():
     """Renders the Daykstar algorithm theory page."""
     return dict(
@@ -65,8 +65,8 @@ def prima_calc():
             year=datetime.now().year
         )
 
-@route('/daykstar_algorithm_calc')
-@view('daykstar_algorithm_calc')
+@route('/daykstra_algorithm_calc')
+@view('daykstra_algorithm_calc')
 def daykstar_calc():
     """Renders the Daykstar algorithm calculator page."""
     return dict(
@@ -104,3 +104,44 @@ def about():
         message='Your application description page.',
         year=datetime.now().year
     )
+
+@route('/floyd_result')
+@view('result')
+def floydResult():
+    """Renders the about page."""
+    return dict(
+        title='Floyd method result',
+        message='Ниже представлен ваш граф, вычисленный по методу Флойда.',
+        year=datetime.now().year
+    )
+
+@route('/daykstra_result')
+@view('result')
+def floydResult():
+    """Renders the about page."""
+    return dict(
+        title='Daykstra method result',
+        message='Ниже представлен ваш граф, вычисленный по методу Дейкстры.',
+        year=datetime.now().year
+    )
+
+@route('/prima_result')
+@view('result')
+def floydResult():
+    """Renders the about page."""
+    return dict(
+        title='Prima algorithm result',
+        message='Ниже представлен ваш минимальный остов, полученный по алгоритму Прима.',
+        year=datetime.now().year
+    )
+
+@route('/kraskal_result')
+@view('result')
+def floydResult():
+    """Renders the about page."""
+    return dict(
+        title='Kraskal algorithm result',
+        message='Ниже представлен ваш минимальный остов, полученный по алгоритму Краскала.',
+        year=datetime.now().year
+    )
+

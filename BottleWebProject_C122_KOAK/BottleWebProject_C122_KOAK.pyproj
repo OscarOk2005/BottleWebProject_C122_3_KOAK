@@ -49,6 +49,10 @@
     <Content Include="static\images\dijkstra_first.png" />
     <Content Include="static\images\dijkstra_second.png" />
     <Content Include="static\images\dijkstra_third.png" />
+    <Content Include="static\images\floyd_condition.png" />
+    <Content Include="static\images\floyd_step_1.png" />
+    <Content Include="static\images\floyd_step_2.png" />
+    <Content Include="static\images\floyd_step_3.png" />
     <Content Include="static\scripts\matrix.js" />
     <Content Include="views\matrix.tpl" />
     <Content Include="static\images\kraskal_step_1.png" />

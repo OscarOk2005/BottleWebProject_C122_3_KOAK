@@ -228,3 +228,11 @@ hr {
 .daystarLabel{
     margin-top: 10px;
 }
+#Welcomemessage {
+    background-color: #428bca;
+}
+
+#Welcomemessage * {
+    color: white !important;
+    font-size: 20px;
+}

@@ -56,11 +56,13 @@
     <Content Include="static\images\floyd_step_2.png" />
     <Content Include="static\images\floyd_step_3.png" />
     <Content Include="static\scripts\matrix.js" />
-    <Content Include="views\daykstra_algorithm_calc.tpl" />
-    <Content Include="views\daykstra_algorithm_theory.tpl" />
+    <Content Include="views\daykstra_algorithm_theory.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\matrix.tpl" />
     <Content Include="static\images\kraskal_step_1.png" />
     <Content Include="static\images\kraskal_step_2.png" />
+    <Content Include="views\daykstra_algorithm_calc.tpl" />
     <Content Include="views\floyd_algorithm_calc.tpl" />
     <Content Include="views\floyd_algorithm_theory.tpl" />
     <Content Include="views\kraskal_algorithm_calc.tpl" />

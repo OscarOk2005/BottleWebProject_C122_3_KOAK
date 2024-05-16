@@ -1,4 +1,4 @@
-﻿
+
 % rebase('layout.tpl', title=title, year=year)
 <div class="container">
   <h1 class="text-center header-page">Метод Дейкстры</h1>
@@ -180,4 +180,3 @@
     <a href="daykstar_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
   </div>
 </div>
-

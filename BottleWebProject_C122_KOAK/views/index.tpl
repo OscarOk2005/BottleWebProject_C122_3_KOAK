@@ -57,4 +57,30 @@
 
         <a href="/prima_algorithm_theory" class="btn btn-primary">Перейти к теории</a>
     </div>
+
+    <div class="theory-block text-center">
+        <h3>Дополнительные интересные материалы</h3>
+        <ul class="list-group">
+            <li class="list-group-item"> <span class="badge">3</span> <p><a data-toggle="collapse" href="#articles" aria-expanded="false" aria-controls="articles">Статьи</a> </p>
+                <div class="collapse" id="articles">
+                    <ol class = "text-left">
+                        <li> <a href="https://dzen.ru/a/YMHJvfdCa1GDEqzU"> Почему теория графов круче, чем вы думали</a></li>
+                        <li> <a href="https://scientificrussia.ru/articles/soedinyaya-vershiny"> Как графовые алгоритмы ищут маршруты</a></li>
+                        <li> <a href="https://obuchonok.ru/node/1321"> Применение графов в различных областях жизни людей </a></li>
+                    </ol>
+                </div>
+            </li>
+            <li class="list-group-item"> <span class="badge">3</span> <p><a data-toggle="collapse" href="#videos" aria-expanded="false" aria-controls="videos">Видео</a> </p>
+                <div class="collapse" id="videos">
+                    <ol class = "text-left">
+                        <li> <a href="https://www.youtube.com/watch?v=VehB3eglQMQ"> Как работают графы | Структуры данных</a></li>
+                        <li> <a href="https://www.youtube.com/watch?v=TvFSNYDWwQU"> Использование графов при решении задач </a></li>
+                        <li> <a href="https://www.youtube.com/watch?v=xphIRTGshco"> Теория графов в программировании </a></li>
+                    </ol>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
 </div>

@@ -1,29 +1,58 @@
 % rebase('layout.tpl', title='Home Page', year=year)
 
-<div class="jumbotron">
-    <h1>Bottle</h1>
-    <p class="lead">Bottle is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://bottlepy.org/docs/dev/index.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
+<div class="container">
+    <h1 class="text-center mb-3">Добро пожаловать на сайт "GraphX"!</h1>
+    <h2 class="text-center mb-3">Откройте для себя увлекательный мир теории графов и практических алгоритмов для нахождения кратчайших путей и остовов!</h2>
+    <h3 class="text-center mb-3">Наш сайт создан, чтобы помочь вам разобраться в ключевых концепциях теории графов и научиться применять их на практике. </h3>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
+    <br>
+    <div class="theory-block">
+        <h3>Что такое граф?</h3>
         <p>
-            Bottle gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Графы представляют собой математические структуры, состоящие из множества вершин (узлов) и множества ребер, соединяющих эти вершины.
+            Теория графов является фундаментальным инструментом в дискретной математике и имеет широкое применение в различных областях знаний. 
         </p>
-        <p><a class="btn btn-default" href="http://bottlepy.org/docs/dev/index.html">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+
+    <div class="theory-block">
+        <h3>Какие задачи решаются с помощью теории графов?</h3>
+        <p>
+            Теория графов находит широкое применение в различных областях, например, таких как:
+        </p>
+        <ul>
+            <li> Навигация: Поиск кратчайших путей между городами, маршрутов для транспортных средств и т.д. </li>
+            <li> Компьютерные сети: Определение оптимальных путей передачи данных, оптимизация структуры сети и т.д. </li>
+            <li> Финансовая сфера: Выбор оптимальных инвестиций, минимизация рисков и т.д. </li>
+            <li> Социальные сети: Изучение социальных взаимодействий, выявление влиятельных лиц, прогнозирование распространения информации и т.д.</li>
+        </ul>
     </div>
-    <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+
+    <div class="theory-block">
+        <h3>Какие алгоритмы мы рассмотрим?</h3>
+        <p>
+           На нашем сайте Вы найдете информацию о следующих алгоритмах для работы с неориентированными графами:
+        </p>
+        <ul>
+            <li> Алгоритм Дейкстры: Нахождение кратчайших путей от одной исходной вершины до всех остальных вершин. </li>
+            <li> Алгоритм Флойда: Нахождение кратчайших путей между всеми парами вершин в графе. </li>
+            <li> Алгоритм Прима: Построение минимального остовного дерева, которое является подграфом, соединяющим все вершины графа с минимальной 
+            общей стоимостью ребер. </li>
+            <li> Алгоритм Краскала: Построение минимального остовного дерева с помощью жадного алгоритма, который последовательно добавляет ребра
+            с минимальной стоимостью, не создавая циклов.</li>
+        </ul>
+    </div>
+
+    <div class="theory-block">
+        <h3>Что предлагает наш сайт?</h3>
+        <ul>
+            <li> Теория: Подробное описание алгоритмов Дейкстры, Флойда, Прима и Краскала, включая их принципы работы, вычислительную скорость, а также иллюстрации на примерах. </li>
+            <li> Калькулятор: Интерактивный инструмент для демонстрации работы алгоритмов на примере заданного Вами с помощью матрицы смежности графа. </li>
+        </ul>
+    </div>
+
+    <div class="theory-block text-center">
+        <h3>Приглашаем вас погрузиться в мир графов!</h3>
+
+        <a href="/prima_algorithm_theory" class="btn btn-primary">Перейти к теории</a>
     </div>
 </div>

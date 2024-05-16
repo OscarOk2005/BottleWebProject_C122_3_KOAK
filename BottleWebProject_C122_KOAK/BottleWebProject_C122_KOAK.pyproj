@@ -44,6 +44,8 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\developers.json" />
+    <Content Include="static\images\artem.png" />
     <Content Include="static\images\dijkstra_finish.png" />
     <Content Include="static\images\dijkstra_finish2.png" />
     <Content Include="static\images\dijkstra_first.png" />
@@ -53,6 +55,11 @@
     <Content Include="static\images\floyd_step_1.png" />
     <Content Include="static\images\floyd_step_2.png" />
     <Content Include="static\images\floyd_step_3.png" />
+    <Content Include="static\images\github.png" />
+    <Content Include="static\images\ivan.png" />
+    <Content Include="static\images\oleg.png" />
+    <Content Include="static\images\oskar.png" />
+    <Content Include="static\images\VK.png" />
     <Content Include="static\scripts\matrix.js" />
     <Content Include="views\matrix.tpl" />
     <Content Include="static\images\kraskal_step_1.png" />

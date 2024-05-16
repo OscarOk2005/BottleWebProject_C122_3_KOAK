@@ -1,6 +1,6 @@
 % rebase('layout.tpl', title='Prima algorithm theory', year=year)
 <div class="container">
-  <h1 class="text-center mb-3">Алгоритм Прима</h1>
+  <h1 class="text-center header-page">Алгоритм Прима</h1>
 
   <div class="theory-block">
     <h3>Формальная постановка задачи</h3>

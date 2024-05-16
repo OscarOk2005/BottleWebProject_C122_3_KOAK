@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Артем Кудринский",
+    "image": "static/images/artem.png",
+    "description": "Привет! Моей задачей было создание страниц с теорией и калькулятором по алгоритму Прима. Также мной была разработана страница об авторах.",
+    "social_links": [
+      {
+        "name": "VK",
+        "url": "https://vk.com/id341462204",
+        "icon": "/static/images/VK.png"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/S0s0Combain",
+        "icon": "/static/images/github.png"
+      }
+    ]
+  },
+  {
+    "name": "Иван Комков",
+    "image": "static/images/ivan.png",
+    "description": "Всем привет! Я занимался созданием страницы с теорией по алгоритму Краскала, а также реализациией калькулятора с данным алгоритмом. Также создал шапку и подвала сайта.",
+    "social_links": [
+      {
+        "name": "VK",
+        "url": "https://vk.com/id495604218",
+        "icon": "/static/images/VK.png"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/Git-Vanek",
+        "icon": "/static/images/github.png"
+      }
+    ]
+  },
+  {
+    "name": "Оскар Около-Кулак",
+    "image": "static/images/oskar.png",
+    "description": "Здравствуйте! Я приложил руку к созданию теории и калькулятора по алгоритму Дейкстра. Также я занимался созданием страницы с выводом результатов вычислений.",
+    "social_links": [
+      {
+        "name": "VK",
+        "url": "https://vk.com/p131585532210_i16_t2_se1152",
+        "icon": "/static/images/VK.png"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/OscarOk2005",
+        "icon": "/static/images/github.png"
+      }
+    ]
+  },
+  {
+    "name": "Олег Афанасьев",
+    "image": "static/images/oleg.png",
+    "description": "Приветствую! В мои обязанности входило оформление главной страницы, а также создание страниц с теорией и калькулятором по методу Флойда.",
+    "social_links": [
+      {
+        "name": "VK",
+        "url": "https://vk.com/ol_af",
+        "icon": "/static/images/VK.png"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/01afff",
+        "icon": "/static/images/github.png"
+      }
+    ]
+  }
+]

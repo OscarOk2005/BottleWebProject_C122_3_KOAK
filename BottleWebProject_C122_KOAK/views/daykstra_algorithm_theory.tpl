@@ -1,7 +1,7 @@
 ﻿
 % rebase('layout.tpl', title=title, year=year)
 <div class="container">
-  <h1 class="text-center mb-3">Метод Дейкстры</h1>
+  <h1 class="text-center header-page">Метод Дейкстры</h1>
 
   <div class="theory-block">
     <h3>Формальная постановка задачи</h3>

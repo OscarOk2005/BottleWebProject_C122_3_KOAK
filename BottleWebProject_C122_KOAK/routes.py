@@ -3,9 +3,10 @@ Routes and views for the bottle application.
 """
 
 from re import template
-from bottle import route, view, post, request, get
+from bottle import route, template, request, response, static_file, view
 from datetime import datetime
 import app
+import json
 
 @route('/')
 @view('index')

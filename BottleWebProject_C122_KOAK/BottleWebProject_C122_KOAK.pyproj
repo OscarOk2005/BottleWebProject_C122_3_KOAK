@@ -44,6 +44,8 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\developers.json" />
+    <Content Include="static\images\artem.png" />
     <Content Include="static\images\dijkstra_finish.png" />
     <Content Include="static\images\dijkstra_finish2.png" />
     <Content Include="static\images\dijkstra_first.png" />
@@ -53,7 +55,6 @@
     <Content Include="static\images\floyd_step_1.png" />
     <Content Include="static\images\floyd_step_2.png" />
     <Content Include="static\images\floyd_step_3.png" />
-    <Content Include="static\images\Graph.png" />
     <Content Include="static\scripts\matrix.js" />
     <Content Include="views\daykstra_algorithm_calc.tpl" />
     <Content Include="views\daykstra_algorithm_theory.tpl" />

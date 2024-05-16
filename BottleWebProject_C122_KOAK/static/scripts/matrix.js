@@ -35,6 +35,9 @@ function createMatrix() {
                     const cell = document.createElement('td');
                     const input = document.createElement('input');
                     input.type = 'number';
+                    input.onkeydown = function (event) {
+                        return event.key !== '-';
+                    };
                     input.classList.add('form-control');
                     input.classList.add('matrix-input');
                     input.name = `matrix[${i}][${j}]`;

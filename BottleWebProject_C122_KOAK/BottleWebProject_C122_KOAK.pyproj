@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="daykstra_calculations.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="prima_handler.py">
       <SubType>Code</SubType>
     </Compile>

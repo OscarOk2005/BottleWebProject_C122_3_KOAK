@@ -3,9 +3,10 @@ Routes and views for the bottle application.
 """
 
 from re import template
-from bottle import route, view, post, request, get
+from bottle import route, template, request, response, static_file, view
 from datetime import datetime
 import app
+import json
 
 @route('/')
 @view('index')
@@ -96,11 +97,8 @@ def kraskal_calc():
         )
 
 @route('/about')
-@view('about')
 def about():
-    """Renders the about page."""
-    return dict(
-        title='About',
-        message='Your application description page.',
-        year=datetime.now().year
-    )
+    with open('static\developers.json', 'r', encoding='utf-8') as f:
+        team_members = json.load(f)
+    return template('about.tpl', title='About us page', year=datetime.now().year, team_members=team_members)
+

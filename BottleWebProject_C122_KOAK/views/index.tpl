@@ -1,7 +1,7 @@
 % rebase('layout.tpl', title='Home Page', year=year)
 
 <div class="container">
-    <h1 class="text-center mb-3">Добро пожаловать на сайт "GraphX"!</h1>
+    <h1 class="text-center header-page">Добро пожаловать на сайт "GraphX"!</h1>
     <h2 class="text-center mb-3">Откройте для себя увлекательный мир теории графов и практических алгоритмов для нахождения кратчайших путей и остовов!</h2>
     <h3 class="text-center mb-3">Наш сайт создан, чтобы помочь вам разобраться в ключевых концепциях теории графов и научиться применять их на практике. </h3>
 

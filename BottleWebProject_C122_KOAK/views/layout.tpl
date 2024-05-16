@@ -40,7 +40,7 @@
                             <li><a href="/kraskal_algorithm_calc">Алгоритм Краскала</a></li>
                         </ul>
                     </li>
-                    <li><a href="/daykstra_result" id="color_white">Об авторах</a></li>
+                    <li><a href="/about" id="color_white">Об авторах</a></li>
                 </ul>
             </div>
         </div>

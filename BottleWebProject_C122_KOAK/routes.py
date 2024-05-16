@@ -97,14 +97,10 @@ def kraskal_calc():
         )
 
 @route('/about')
-@view('about')
 def about():
-    """Renders the about page."""
-    return dict(
-        title='About',
-        message='Your application description page.',
-        year=datetime.now().year
-    )
+    with open('static\developers.json', 'r', encoding='utf-8') as f:
+        team_members = json.load(f)
+    return template('about.tpl', team_members=team_members, title='About us page', year=datetime.now().year)
 
 @route('/floyd_result')
 @view('result')

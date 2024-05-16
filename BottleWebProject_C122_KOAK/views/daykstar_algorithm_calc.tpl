@@ -1,1 +1,1 @@
-% rebase('layout.tpl', title='Prima algorithm theory', year=year)
+% rebase('layout.tpl', title=title, year=year)

@@ -65,20 +65,20 @@ body {
     background-color: #fff;
 }
 
-    .theory-block h3 {
-        margin-top: 0;
-        color: #007bff;
-    }
+.theory-block h3 {
+    margin-top: 0;
+    color: #007bff;
+}
 
-    .theory-block p {
-        line-height: 1.5;
-    }
+.theory-block p {
+    line-height: 1.5;
+}
 
-    .theory-block img {
-        margin: auto;
-        display:block;
-        width:60%;
-    }
+.theory-block img {
+    margin: auto;
+    display:block;
+    width:60%;
+}
 
 pre {
     background-color: #f5f5f5;

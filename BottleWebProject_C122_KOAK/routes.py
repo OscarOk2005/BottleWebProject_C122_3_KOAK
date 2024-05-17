@@ -119,7 +119,6 @@ def floydResult():
     """Renders the about page."""
     return dict(
         title='Daykstra method result',
-        data = daykstra_calculations.getResult(),
         message='Ниже представлен ваш граф, вычисленный по методу Дейкстры.',
         year=datetime.now().year
     )

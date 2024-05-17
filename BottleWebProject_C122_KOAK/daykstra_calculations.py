@@ -1,15 +1,16 @@
-from bottle import route, run, template, post
+from bottle import route, run, template, post, request
 from datetime import datetime
+import numpy as np
+import createGraph
 
-
-
-@post('/daykstra_algorithm_calc', method='GET')
-
+@post('/daykstra_result', method='POST')
 def getResult():
-    matrix = ([[0, 7, 8, -1, -1, -1],
-                      [7, 0, 11, 2, -1, -1],
-                      [8, 11, 0, 6, 9, -1],
-                      [-1, 2, 6, 0, 11, 9],
-                      [-1, -1, 9, 11, 0, 10],
-                      [-1, -1, -1, 9, 10 ,0]])
-    return matrix
+    size = int(request.forms.get('matrix_size'))
+    matrix = np.zeros((size, size))
+    for i in range(size):
+        for j in range(size):
+            matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+    createGraph.createGraph(matrix, [])
+    return template('result.tpl',title='Daykstra method result',
+        message='Ниже представлен ваш граф, вычисленный по методу Дейкстры.',
+        year=datetime.now().year, data=matrix)

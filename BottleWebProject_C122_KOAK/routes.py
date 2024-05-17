@@ -7,6 +7,7 @@ from bottle import route, template, request, response, static_file, view
 from datetime import datetime
 import app
 import json
+import daykstra_calculations
 
 @route('/')
 @view('index')

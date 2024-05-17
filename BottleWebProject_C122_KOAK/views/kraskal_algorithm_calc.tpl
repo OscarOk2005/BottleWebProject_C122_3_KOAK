@@ -1,7 +1,7 @@
 % rebase('layout.tpl', title='Kraskal algorithm calculator', year=year)
 <div class="container">
-        <h1 class="text-center header-page">Калькулятор алгоритма Краскала</h1>
-        <p class="text-center">Здесь вы можете ввести данные для алгоритма Краскала и найти минимальное остовное дерево</p>
+        <h1 class="text-center header-page">РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ Р°Р»РіРѕСЂРёС‚РјР° РљСЂР°СЃРєР°Р»Р°</h1>
+        <p class="text-center">Р—РґРµСЃСЊ РІС‹ РјРѕР¶РµС‚Рµ РІРІРµСЃС‚Рё РґР°РЅРЅС‹Рµ РґР»СЏ Р°Р»РіРѕСЂРёС‚РјР° РљСЂР°СЃРєР°Р»Р° Рё РЅР°Р№С‚Рё РјРёРЅРёРјР°Р»СЊРЅРѕРµ РѕСЃС‚РѕРІРЅРѕРµ РґРµСЂРµРІРѕ</p>
         %include('matrix.tpl')
         <div id="matrixContainer"></div>
     </div>

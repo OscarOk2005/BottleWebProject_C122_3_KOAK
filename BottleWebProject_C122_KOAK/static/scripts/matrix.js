@@ -41,6 +41,7 @@ function createMatrix() {
                     input.classList.add('form-control');
                     input.classList.add('matrix-input');
                     input.name = `matrix[${i}][${j}]`;
+                    input.id = `matrix[${i}][${j}]`;
                     cell.appendChild(input);
                     row.appendChild(cell);
                 }
@@ -55,6 +56,7 @@ function createMatrix() {
             submitButton.type = 'submit';
             submitButton.classList.add('btn', 'btn-primary', 'mt-3');
             submitButton.textContent = 'Рассчитать';
+            submitButton.onclick = checkMatrix;
             container.appendChild(submitButton);
         }
         else {
@@ -63,5 +65,28 @@ function createMatrix() {
     }
     else {
         alert("Ошибка");
+    }
+}
+
+function checkMatrix() {
+    const size = Number.parseInt(document.getElementById('matrix_size').value);
+    let sum = 0;
+    for (let i = 0; i < size; i++) {
+        sum = 0;
+        for (let j = 0; j < size; j++) {
+            sum += document.getElementById(`matrix[${i}][${j}]`);
+            if (document.getElementById(`matrix[${i}][${j}]`) != document.getElementById(`matrix[${j}][${i}]`)) {
+                alert("Ошибка");
+                return false;
+            }
+            else if (document.getElementById(`matrix[${i}][${i}]`) != 0){
+                alert("Ошибка");
+                return false;
+            }
+        }
+        if (sum == 0) {
+            alert("Ошибка");
+            return false;
+        }
     }
 }

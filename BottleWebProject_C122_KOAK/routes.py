@@ -8,6 +8,7 @@ from datetime import datetime
 import app
 import json
 import daykstra_calculations
+import prima_handler
 
 @route('/')
 @view('index')
@@ -115,7 +116,7 @@ def floydResult():
 
 @route('/daykstra_result')
 @view('result')
-def floydResult():
+def daykstraResult():
     """Renders the about page."""
     return dict(
         title='Daykstra method result',
@@ -125,7 +126,7 @@ def floydResult():
 
 @route('/prima_result')
 @view('result')
-def floydResult():
+def primaResult():
     """Renders the about page."""
     return dict(
         title='Prima algorithm result',
@@ -135,7 +136,7 @@ def floydResult():
 
 @route('/kraskal_result')
 @view('result')
-def floydResult():
+def kraskalResult():
     """Renders the about page."""
     return dict(
         title='Kraskal algorithm result',

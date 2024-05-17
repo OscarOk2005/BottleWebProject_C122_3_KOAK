@@ -31,9 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
-    <Compile Include="createMatrix.py">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="createGraph.py" />
     <Compile Include="daykstra_calculations.py">
       <SubType>Code</SubType>
     </Compile>

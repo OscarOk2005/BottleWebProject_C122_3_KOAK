@@ -7,9 +7,10 @@ def createGraph(pathes, color_pathes):
     pathes =  np.array(pathes)
     color_pathes =  np.array(color_pathes)
     G = nx.Graph()
+    print (pathes)
     for i in range(int(sqrt(pathes.size))):
         for j in range(int(sqrt(pathes.size))):
-            if pathes[i, j] > 1:
+            if pathes[i, j] >= 1:
                 G.add_edge(i + 1, j + 1, weight=pathes[i, j])
 
     pos = nx.spring_layout(G, seed=666)
@@ -22,4 +23,5 @@ def createGraph(pathes, color_pathes):
     edge_labels = nx.get_edge_attributes(G, 'weight')
     nx.draw_networkx_edge_labels(G, pos, edge_labels)
     plt.savefig("static/images/Graph.png", dpi=150)
+    
     return

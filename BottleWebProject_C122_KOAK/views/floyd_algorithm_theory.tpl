@@ -44,16 +44,19 @@
       <li>Матрица смежности D[i][j]</li>
     </ol> 
     <p>Выход: матрица расстояний между всеми парами вершин W[i][j] </p>
-    <pre>
-        <code id="pseudocode">1.    процедура AlgoFloyda do  // Алгоритм Флойда
-            <br>2.   Для каждой вершины k от 1 до n:
-            <br>3.        Для каждой вершины i от 1 до n:
-            <br>4.            Для каждой вершины j от 1 до n:
-            <br>5.                Если W[i][j] > W[i][k] + W[k][j]) do
-            <br>6.                    W[i][j] = W[i][k] + W[k][j]
-            <br>7.   Вывод получившейся матрицы расстояний между всеми парами вершин W[i][j] в виде графа 
-        </code>
-    </pre>
+    <p><a data-toggle="collapse" href="#floydpsevdocode" aria-expanded="false" aria-controls="floydpsevdocode">Просмотр псевдокода</a> </p>
+    <div class="collapse" id="floydpsevdocode">
+        <pre>
+            <code id="pseudocode">1.    процедура AlgoFloyda do  // Алгоритм Флойда
+                <br>2.   Для каждой вершины k от 1 до n:
+                <br>3.        Для каждой вершины i от 1 до n:
+                <br>4.            Для каждой вершины j от 1 до n:
+                <br>5.                Если W[i][j] > W[i][k] + W[k][j]) do
+                <br>6.                    W[i][j] = W[i][k] + W[k][j]
+                <br>7.   Вывод получившейся матрицы расстояний между всеми парами вершин W[i][j] в виде графа 
+            </code>
+        </pre>
+    </div>
   </div>
 
   <div class="theory-block">

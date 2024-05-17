@@ -61,35 +61,39 @@
       </li>
     </ol>
     <p>Выход: вес min cost минимального остовного дерева графа G</p>
-    <pre>
-        <code id="pseudocode">1.    процедура AlgoKrys do  // Алгоритм Кроскала
-            <br>2.    N=1;  //Нчальная вершина
-            <br>3.    до тех пор пока(N < n) do  // N - номер текущей вершины
-            <br>4.    min=INF;  //Присваивание значения бесконечности min
-            <br>5.        пока(i=1; min <= n; i++)  // Проход по 
-            <br>6.            пока(j=1; j <= n; j++) // -матрице смежности
-            <br>7.                если(cost[i][j] != INF && cost[i][j] != -1) do  // изменить кайму: для чего
-            <br>8.                целое mincost=0;  //Введение переменной веса МОД
-            <br>9.                    пока(p=1; p<=n; p++) do   
-            <br>10.                        если(visited[p]==i || visited[p]==j) count++;
-            <br>11.                       end;
-            <br>12.                   если(count>=2) do
-            <br>13.                       пока(p=1; p<=n; p++)    
-            <br>14.                           если(cost[i][j]!=INF && p!=j) dup1=p;
-            <br>15.                       пока(p=1;p<=n;p++)  //Добавление ребер шрафа в МОД
-            <br>16.                           если(cost[i][j]!=INF && p!=i) dup2=p;
-            <br>17.                       если(cost[dup1][dup2]==-1) end;
-            <br>18.                   l=i; k=j; v=cost[i][j]; end;  //Связь ребер в МОД
-            <br>19.               Вывод на экран << "Ребро" << l << "-->" << k;
-            <br>20.               cost[l][k]=-1; cost[k][l]=-1; visi++;
-            <br>21.               пока(j=l; i<=n; i++) do
-            <br>22.                   если(visited[i]==l) count++;
-            <br>23.                   если(visited[j]==k) count++; end;
-            <br>24.               если(count==0) visited[++vst]=l;
-            <br>25.               если(count==0) visited[++vst]=k;
-            <br>26.    end;
-        </code>
-    </pre>
+    <p><a data-toggle="collapse" href="#kraskalpsevdocode" aria-expanded="false" aria-controls="kraskalpsevdocode">Просмотр псевдокода</a> </p>
+    <div class="collapse" id="kraskalpsevdocode">
+         <pre>
+            <code id="pseudocode">1.    процедура AlgoKrys do  // Алгоритм Кроскала
+                <br>2.    N=1;  //Нчальная вершина
+                <br>3.    до тех пор пока(N < n) do  // N - номер текущей вершины
+                <br>4.    min=INF;  //Присваивание значения бесконечности min
+                <br>5.        пока(i=1; min <= n; i++)  // Проход по 
+                <br>6.            пока(j=1; j <= n; j++) // -матрице смежности
+                <br>7.                если(cost[i][j] != INF && cost[i][j] != -1) do  // изменить кайму: для чего
+                <br>8.                целое mincost=0;  //Введение переменной веса МОД
+                <br>9.                    пока(p=1; p<=n; p++) do   
+                <br>10.                        если(visited[p]==i || visited[p]==j) count++;
+                <br>11.                       end;
+                <br>12.                   если(count>=2) do
+                <br>13.                       пока(p=1; p<=n; p++)    
+                <br>14.                           если(cost[i][j]!=INF && p!=j) dup1=p;
+                <br>15.                       пока(p=1;p<=n;p++)  //Добавление ребер шрафа в МОД
+                <br>16.                           если(cost[i][j]!=INF && p!=i) dup2=p;
+                <br>17.                       если(cost[dup1][dup2]==-1) end;
+                <br>18.                   l=i; k=j; v=cost[i][j]; end;  //Связь ребер в МОД
+                <br>19.               Вывод на экран << "Ребро" << l << "-->" << k;
+                <br>20.               cost[l][k]=-1; cost[k][l]=-1; visi++;
+                <br>21.               пока(j=l; i<=n; i++) do
+                <br>22.                   если(visited[i]==l) count++;
+                <br>23.                   если(visited[j]==k) count++; end;
+                <br>24.               если(count==0) visited[++vst]=l;
+                <br>25.               если(count==0) visited[++vst]=k;
+                <br>26.    end;
+            </code>
+        </pre>
+    </div>
+
   </div>
 
   <div class="theory-block">

@@ -74,18 +74,18 @@ function checkMatrix() {
     for (let i = 0; i < size; i++) {
         sum = 0;
         for (let j = 0; j < size; j++) {
-            sum += document.getElementById(`matrix[${i}][${j}]`);
-            if (document.getElementById(`matrix[${i}][${j}]`) != document.getElementById(`matrix[${j}][${i}]`)) {
-                alert("Ошибка");
+            sum += Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value);
+            if (Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value) != Number.parseInt(document.getElementById(`matrix[${j}][${i}]`).value)) {
+                alert("Ошибка 1");
                 return false;
             }
-            else if (document.getElementById(`matrix[${i}][${i}]`) != 0){
-                alert("Ошибка");
+            else if (Number.parseInt(document.getElementById(`matrix[${i}][${i}]`).value) != 0){
+                alert("Ошибка 2");
                 return false;
             }
         }
         if (sum == 0) {
-            alert("Ошибка");
+            alert("Ошибка 3");
             return false;
         }
     }

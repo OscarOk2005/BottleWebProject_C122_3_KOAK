@@ -9,6 +9,7 @@ import app
 import json
 import daykstra_calculations
 import prima_handler
+import floyd_handler
 import kraskal_calculations
 
 @route('/')

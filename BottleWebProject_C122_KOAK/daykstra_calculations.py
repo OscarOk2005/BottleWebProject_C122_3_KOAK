@@ -12,6 +12,4 @@ def getResult():
                       [-1, 2, 6, 0, 11, 9],
                       [-1, -1, 9, 11, 0, 10],
                       [-1, -1, -1, 9, 10 ,0]])
-    return template("result.tpl", data=matrix,  title='Daykstra method result',
-        message='Ниже представлен ваш граф, вычисленный по методу Дейкстры.',
-        year=datetime.now().year)
+    return matrix

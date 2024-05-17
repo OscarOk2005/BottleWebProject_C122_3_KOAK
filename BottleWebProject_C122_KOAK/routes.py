@@ -7,6 +7,7 @@ from bottle import route, template, request, response, static_file, view
 from datetime import datetime
 import app
 import json
+import daykstra_calculations
 
 @route('/')
 @view('index')
@@ -118,6 +119,7 @@ def floydResult():
     """Renders the about page."""
     return dict(
         title='Daykstra method result',
+        data = daykstra_calculations.getResult(),
         message='Ниже представлен ваш граф, вычисленный по методу Дейкстры.',
         year=datetime.now().year
     )

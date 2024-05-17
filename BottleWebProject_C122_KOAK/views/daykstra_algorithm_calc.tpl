@@ -2,7 +2,7 @@
 <div class="container">
         <h1 class="text-center mb-3">Калькулятор метода Дейкстры</h1>
         <p class="text-center">Здесь вы можете ввести данные для метода Дейкстры и найти минимальное расстояние от указанной точки.</p>
-        <form class="mb-3" action="/daykstra_result" method="GET" action="/action_page.php" onsubmit="return validateForm()" required name="daykstra_calculations" id="matrix_form">
+        <form class="mb-3" action="/daykstra_result" method="GET" action="/action_page.php" onsubmit="return getResult()" required name="daykstra_calculations" id="matrix_form">
             <div class="form-group">
                 <label for="matrix_size">Размерность матрицы</label>
                 <input type="number" class="form-control" id="matrix_size" name="matrix_size" min="3" max="10" required/>

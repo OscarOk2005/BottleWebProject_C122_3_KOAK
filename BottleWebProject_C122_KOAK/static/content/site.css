@@ -69,6 +69,7 @@ body {
 .theory-block h3 {
     margin-top: 0;
     color: #007bff;
+    line-height: 1.5;
 }
 
 .theory-block p {
@@ -235,4 +236,15 @@ hr {
 #Welcomemessage * {
     color: white !important;
     font-size: 20px;
+}
+.badge {
+    background-color: #428bca;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: underline !important;
 }

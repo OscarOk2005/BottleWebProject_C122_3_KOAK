@@ -79,7 +79,9 @@
       </li>
     </ol>
     <p>Выход: новый граф с минимальными расстояниями от начальной вершины до других.</p>
-    <pre>
+    <p><a data-toggle="collapse" href="#daykstrapsevdocode" aria-expanded="false" aria-controls="daykstrapsevdocode">Просмотр псевдокода</a> </p>
+    <div class="collapse" id="daykstrapsevdocode">
+        <pre>
         <code id="pseudocode">1.    func dijkstra(s):
             <br>2.    for  v∈V  // По умолчанию присвоим всем вершинам бесконечную стоимость и отметим их как непосещённых
             <br>3.        d[v] = ∞
@@ -98,6 +100,7 @@
             <br>16.             d[e.to] = d[v] + e.len
         </code>
     </pre>
+    </div>
   </div>
 
   <div class="theory-block">

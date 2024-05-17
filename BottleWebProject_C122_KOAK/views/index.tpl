@@ -61,21 +61,21 @@
     <div class="theory-block text-center">
         <h3>Дополнительные интересные материалы</h3>
         <ul class="list-group">
-            <li class="list-group-item"> <span class="badge">3</span> <p><a data-toggle="collapse" href="#articles" aria-expanded="false" aria-controls="articles">Статьи</a> </p>
+            <li class="list-group-item"> <span class="badge">3</span> <p><a id="" data-toggle="collapse" href="#articles" aria-expanded="false" aria-controls="articles">Статьи</a> </p>
                 <div class="collapse" id="articles">
                     <ol class = "text-left">
-                        <li> <a href="https://dzen.ru/a/YMHJvfdCa1GDEqzU"> Почему теория графов круче, чем вы думали</a></li>
-                        <li> <a href="https://scientificrussia.ru/articles/soedinyaya-vershiny"> Как графовые алгоритмы ищут маршруты</a></li>
-                        <li> <a href="https://obuchonok.ru/node/1321"> Применение графов в различных областях жизни людей </a></li>
+                        <li> <a href="https://dzen.ru/a/YMHJvfdCa1GDEqzU" target="_blank" > Почему теория графов круче, чем вы думали</a></li>
+                        <li> <a href="https://scientificrussia.ru/articles/soedinyaya-vershiny" target="_blank"> Как графовые алгоритмы ищут маршруты</a></li>
+                        <li> <a href="https://obuchonok.ru/node/1321" target="_blank"> Применение графов в различных областях жизни людей </a></li>
                     </ol>
                 </div>
             </li>
             <li class="list-group-item"> <span class="badge">3</span> <p><a data-toggle="collapse" href="#videos" aria-expanded="false" aria-controls="videos">Видео</a> </p>
                 <div class="collapse" id="videos">
                     <ol class = "text-left">
-                        <li> <a href="https://www.youtube.com/watch?v=VehB3eglQMQ"> Как работают графы | Структуры данных</a></li>
-                        <li> <a href="https://www.youtube.com/watch?v=TvFSNYDWwQU"> Использование графов при решении задач </a></li>
-                        <li> <a href="https://www.youtube.com/watch?v=xphIRTGshco"> Теория графов в программировании </a></li>
+                        <li> <a href="https://www.youtube.com/watch?v=VehB3eglQMQ" target="_blank"> Как работают графы | Структуры данных</a></li>
+                        <li> <a href="https://www.youtube.com/watch?v=TvFSNYDWwQU" target="_blank"> Использование графов при решении задач </a></li>
+                        <li> <a href="https://www.youtube.com/watch?v=xphIRTGshco" target="_blank"> Теория графов в программировании </a></li>
                     </ol>
                 </div>
             </li>

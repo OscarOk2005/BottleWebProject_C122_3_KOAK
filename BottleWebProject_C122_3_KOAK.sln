@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BottleWebProject_C122_KOAK", "BottleWebProject_C122_KOAK\BottleWebProject_C122_KOAK.pyproj", "{E4555BB0-E58F-420D-810A-24FE3F3429C2}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "BottleWebProject_C122_3_KOAK", "BottleWebProject_C122_KOAK\BottleWebProject_C122_3_KOAK.pyproj", "{E4555BB0-E58F-420D-810A-24FE3F3429C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

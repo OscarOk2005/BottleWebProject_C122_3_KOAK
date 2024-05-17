@@ -242,12 +242,6 @@ hr {
     background-color: #428bca;
 }
 
-a {
-    text-decoration: none !important;
-}
-
-a:hover {
-    text-decoration: underline !important;
 
 .resultTable {
     width: 100% !important;
@@ -256,4 +250,12 @@ a:hover {
     display: flex;
     justify-content: center;
 
+}
+
+#withoutunderscore {
+    text-decoration: none !important;
+}
+
+#withoutunderscore:hover {
+    text-decoration: underline !important;
 }

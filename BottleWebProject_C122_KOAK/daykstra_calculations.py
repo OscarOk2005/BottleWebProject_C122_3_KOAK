@@ -6,44 +6,74 @@ import save_history
 
 @post('/daykstra_result', method='POST')
 def getResult():
+    # Получаем размер матрицы
     size = int(request.forms.get('matrix_size'))
-    matrix = np.zeros((size, size))
+    # Создаём пустую матрицу
+    old_matrix = np.zeros((size, size))
+    # Заполняем матрицу данными со страницы
     for i in range(size):
         for j in range(size):
-             if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
+             # Проверяем, что значение было введено
+            if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
+                # Если не была введено значение между вершинами - присваиваем -1
                 if(i != j):
-                    matrix[i, j] = -1
+                    old_matrix[i, j] = -1
+                # Иначе - 0
                 else:
-                    matrix[i, j] = 0
-             else:
-                matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+                    old_matrix[i, j] = 0
+            else:
+                # Получение данных
+                old_matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+    # Получение начальной точки
     start_node = int(request.forms.get('start_point')) - 1
-    save_history.createhistory("Daykstra", [matrix, Dijkstra(size ,start_node, matrix)])
-    new_Matrix = Dijkstra(size ,start_node, matrix)
-    matrix = np.zeros((size, size))
+    # Получение списка расстояний от указаной точки до других
+    intermediate_matrix = Dijkstra(size,start_node, old_matrix)
+    # Заполнение новой матрицы
+    new_Matrix = np.zeros((size, size))
     for i in range(size):
-        matrix[0, i]  = new_Matrix[i]
-        matrix[i, 0]  = new_Matrix[i]
-    print (matrix)
-    createGraph.createGraph(matrix, [])
+        new_Matrix[start_node, i]  = intermediate_matrix[i]
+        new_Matrix[i, start_node]  = intermediate_matrix[i]
+    # Сохранение начальной и итоговой матриц
+    save_history.createhistory("Daykstra", [old_matrix.tolist(), new_Matrix.tolist()])
+    # Создание графа
+    createGraph.createGraph(new_Matrix, [])
+    # Переход на страницу с результатом
     return template('result.tpl',title='Daykstra method result',
         message='Ниже представлен ваш граф, вычисленный по методу Дейкстры.',
-        year=datetime.now().year, data=matrix)
+        year=datetime.now().year, data=new_Matrix)
 
+# Метод алгоритма Дейкстры
+# N - Размер матрицы
+# S - Начальная вершина
+# matrix - матрица смежности
 def Dijkstra(N, S, matrix):
-	valid = [True]*N        
-	weight = [1000000]*N
-	weight[S] = 0
-	matrix= np.array(matrix)
+    # Создаём массив в котором обозначаем все вершины непроверенными  
+	valid = [True]*N      
+    # Присваиваем всем вершинам большую стоимость 
+	cost = [1000000]*N
+    # Присваиваем начальной вершине стоимость 0 
+	cost[S] = 0
+    # Преобразовываем list в array 
+	matrix = np.array(matrix)
+    # Перебор всех вершин  
 	for i in range(N):
+        # Переменная, хранящая минимально найденную стоимость    
 		min_weight = 1000001
+        # Переменная, хранящая номер вершины с минимальной стоимостью    
 		ID_min_weight = -1
+        # Поиск вершины с минимальной стоимостью    
 		for j in range(N):
-			if valid[j] and weight[j] < min_weight:
-				min_weight = weight[j]
+            # Ищем вершины с минимальной стоимостью из непроверенных     
+			if valid[j] and cost[j] < min_weight:
+                # Сохраняем минимальную стоимость и номер вершины с минимальной стоимостью        
+				min_weight = cost[j]
 				ID_min_weight = j
-		for z in range(N):
-			if weight[ID_min_weight] + matrix[ID_min_weight][z] < weight[z]:
-				weight[z] = weight[ID_min_weight] + matrix[ID_min_weight][z]
+        # Цикл обновляющий стоимости всех соседних       
+		for j in range(N):
+            # Если новая стоимость меньше старой -  обновляем её     
+			if cost[ID_min_weight] + matrix[ID_min_weight][j] < cost[j]:
+				cost[j] = cost[ID_min_weight] + matrix[ID_min_weight][j]
+        # Отмечаем точку как проверенную        
 		valid[ID_min_weight] = False
-	return weight
+    # Возвращаем список длин от исходной точки до остальных    
+	return cost

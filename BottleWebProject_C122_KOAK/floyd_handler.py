@@ -18,10 +18,11 @@ def getResult():
     for i in range(size):
         for j in range(size):
             matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
-    
+    # Создаёт массив из начальной и итоговой матрицы для сохранения в историю
     savedata = [matrix.tolist(), floydmethod(matrix).tolist()]
     # Вычисляет кратчайшие расстояния между всеми парами вершин
     matrix = floydmethod(matrix)
+    # Сохраняет данные в json-файле
     save_history.createhistory("Floyda", savedata)
     # Создает визуализацию графа
     createGraph.createGraph(matrix, [])

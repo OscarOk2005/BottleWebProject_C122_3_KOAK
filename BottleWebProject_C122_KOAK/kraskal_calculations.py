@@ -83,9 +83,7 @@ def getResult():
     matrix = np.zeros((size, size))
     # Перебираем все ячейки матрицы
     for i in range(size):
-        for j in range(size):
-            # Получаем значение ячейки из POST-запроса и присваиваем ее матрице
-            matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+        for j in range(size): 
             # Проверяем, что значение было введено
             if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
                 # Если не была введено значение между вершинами - присваиваем -1
@@ -95,11 +93,13 @@ def getResult():
                 else:
                     matrix[i, j] = 0
             else:
+                # Получаем значение ячейки из POST-запроса и присваиваем ее матрице
                 matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
     
     # Получение значений работы алгоритма Краскала
     result, mst = kraskal(matrix)
     
+    # Сохраняем исходные данные и результат работы метода
     save_history.createhistory("Kraskala", [result, mst])
 
     # Создаем граф и получаем результат работы алгоритма Краскала

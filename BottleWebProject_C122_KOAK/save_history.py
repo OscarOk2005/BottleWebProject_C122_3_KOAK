@@ -22,9 +22,9 @@ def createhistory(methodname, data):
     elif(methodname == "Kraskala"):
         history["Kraskala"].append({"date":string, "edge_list":data[0], "mst":data[1]})
     elif(methodname == "Floyda"):
-        history["Floyda"].append({"date":string, "original":data[0], "resultmat":data[1]})
+        history["Floyda"].append({"date":string, "original":data[0], "result":data[1]})
     elif(methodname == "Daykstra"):
-        history["Daykstra"].append({"date":string, "original":data[0], "resultmat":data[1]})
+        history["Daykstra"].append({"date":string, "original":data[0], "result":data[1]})
         
     with open('proverka.json', 'w') as outfile:
         json.dump(history, outfile, indent = 3)

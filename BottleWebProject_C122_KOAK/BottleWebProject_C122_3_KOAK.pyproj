@@ -45,6 +45,7 @@
     <Compile Include="kraskal_calculations.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="save_history.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\images\" />

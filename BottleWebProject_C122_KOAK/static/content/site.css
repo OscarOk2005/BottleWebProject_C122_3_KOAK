@@ -259,3 +259,7 @@ hr {
 #withoutunderscore:hover {
     text-decoration: underline !important;
 }
+
+#create-matrix-button{
+    margin-bottom: 20px;
+}

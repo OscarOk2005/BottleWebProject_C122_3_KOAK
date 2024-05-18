@@ -3,6 +3,7 @@ from bottle import route, run, template, post, request
 from datetime import datetime
 import numpy as np
 import createGraph
+import save_history
 
 # Функция для поиска корневого элемента для узла i
 def find_parent(parent, i):
@@ -99,6 +100,8 @@ def getResult():
     # Получение значений работы алгоритма Краскала
     result, mst = kraskal(matrix)
     
+    save_history.createhistory("Kraskala", [result, mst])
+
     # Создаем граф и получаем результат работы алгоритма Краскала
     createGraph.createGraph(matrix, result)
 

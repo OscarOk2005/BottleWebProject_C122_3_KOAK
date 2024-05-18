@@ -2,6 +2,7 @@ from bottle import route, run, template, post, request
 from datetime import datetime
 import numpy as np
 import createGraph  # импорт модуля для создания графов
+import save_history
 
 @post('/prima_result', method='POST')  # обработка post-запросов
 #  функция для получения результатов вычислений
@@ -23,6 +24,9 @@ def getResult():
               matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))  # получаем элементы матрицы, введенные на странице калькулятора
     
     edge_list, mst = prim_mst(matrix)  # вызов метода для нахождения mst и суммарного веса mst
+
+    save_history.createhistory("Prima", [edge_list, mst])
+    
 
     createGraph.createGraph(matrix, edge_list)  # создание нового графа
 

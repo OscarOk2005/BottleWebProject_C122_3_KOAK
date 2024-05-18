@@ -52,7 +52,7 @@
 
     <div class="footer">
             <p>&copy; {{ year }} GraphX</p>
-            <a href="#" id="footer_link">Ссылка на группу разработчиков</a>
+            <a href="https://vk.com/college.guap" id="footer_link">Ссылка на группу разработчиков</a>
     </div>
 
     <script src="/static/scripts/jquery-1.10.2.js"></script>

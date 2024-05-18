@@ -154,6 +154,20 @@ def getResult():
         for j in range(size):
             # Получаем значение ячейки из POST-запроса и присваиваем ее матрице
             matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+            # Проверяем, что значение было введено
+            if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
+                # Если не была введено значение между вершинами - присваиваем -1
+                if(i != j):
+                    matrix[i, j] = -1
+                # Иначе - 0
+                else:
+                    matrix[i, j] = 0
+            else:
+                matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+    createGraph.createGraph(matrix, kraskal(matrix))
+    return template('result.tpl',title='Kraskal method result',
+        message='Ниже представлен ваш граф, вычисленный по алгоритму Краскала.',
+        year=datetime.now().year, data=matrix)
 
     # Получение значений работы алгоритма Краскала
     result, mst = kraskal(matrix)

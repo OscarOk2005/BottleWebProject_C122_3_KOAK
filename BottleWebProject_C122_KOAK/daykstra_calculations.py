@@ -2,6 +2,7 @@ from bottle import route, run, template, post, request
 from datetime import datetime
 import numpy as np
 import createGraph
+import save_history
 
 @post('/daykstra_result', method='POST')
 def getResult():
@@ -17,6 +18,7 @@ def getResult():
              else:
                 matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
     start_node = int(request.forms.get('start_point')) - 1
+    save_history.createhistory("Daykstra", [matrix, Dijkstra(size ,start_node, matrix)])
     new_Matrix = Dijkstra(size ,start_node, matrix)
     matrix = np.zeros((size, size))
     for i in range(size):

@@ -9,7 +9,13 @@ def getResult():
     matrix = np.zeros((size, size))
     for i in range(size):
         for j in range(size):
-            matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+            if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
+                if(i != j):
+                    matrix[i, j] = -1
+                else:
+                    matrix[i, j] = 0
+            else:
+                matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
     matrix = floydmethod(matrix)
     createGraph.createGraph(matrix, [])
     return template('result.tpl',title='Floyd method result',

@@ -11,11 +11,21 @@ def getResult():
     # перебор элементов матрицы
     for i in range(size):
         for j in range(size):
-            matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))  # получаем элементы матрицы, введенные на странице калькулятора
+            # Проверяем, что значение было введено
+            if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
+                # Если не была введено значение между вершинами - присваиваем -1
+                if(i != j):
+                    matrix[i, j] = -1
+                # Иначе - 0
+                else:
+                    matrix[i, j] = 0
+            else:
+              matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))  # получаем элементы матрицы, введенные на странице калькулятора
     
     edge_list, mst = prim_mst(matrix)  # вызов метода для нахождения mst и суммарного веса mst
 
     createGraph.createGraph(matrix, edge_list)  # создание нового графа
+
     return template('result.tpl',title='Prima method result',
         message='Ниже представлен ваш граф, вычисленный по алгоритму Прима.',
         year=datetime.now().year, data=mst)  # открытие страницы с результатами

@@ -44,7 +44,13 @@ def getResult():
     matrix = np.zeros((size, size))
     for i in range(size):
         for j in range(size):
-            matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+            if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
+                if(i != j):
+                    matrix[i, j] = -1
+                else:
+                    matrix[i, j] = 0
+            else:
+                matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
     createGraph.createGraph(matrix, kraskal(matrix))
     return template('result.tpl',title='Kraskal method result',
         message='Ниже представлен ваш граф, вычисленный по алгоритму Краскала.',

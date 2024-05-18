@@ -10,7 +10,7 @@
 		% import numpy as np
 		% data = np. array(data)
 		% if data.size == 1:
-		<p>Суммарный вес искомого MST = {{data}}</p>
+		<p>Суммарный вес искомого MST = {{int(data)}}</p>
 		% else:
 		<p>
 			Граф выше может быть представлен следующей матрицей смежности:

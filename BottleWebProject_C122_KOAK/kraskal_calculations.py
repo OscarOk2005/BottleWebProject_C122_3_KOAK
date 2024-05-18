@@ -164,11 +164,7 @@ def getResult():
                     matrix[i, j] = 0
             else:
                 matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
-    createGraph.createGraph(matrix, kraskal(matrix))
-    return template('result.tpl',title='Kraskal method result',
-        message='Ниже представлен ваш граф, вычисленный по алгоритму Краскала.',
-        year=datetime.now().year, data=matrix)
-
+    
     # Получение значений работы алгоритма Краскала
     result, mst = kraskal(matrix)
     

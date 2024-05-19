@@ -65,43 +65,59 @@ function createMatrix() {
             submitButton.onclick = checkMatrix;
 
             container.appendChild(submitButton);  // добавление кнопки в контейнер
+            document.getElementById('matrix_size').setCustomValidity('');
         }
         else {
-            alert("Ошибка");
+            document.getElementById('matrix_size').setCustomValidity('Необходимо ввести целое число от 3 до 10');
+            document.getElementById('matrix_size').reportValidity();
+            return;
         }
     }
     else {
-        alert("Ошибка");
+        document.getElementById('matrix_size').setCustomValidity('Необходимо ввести целое число от 3 до 10');
+        document.getElementById('matrix_size').reportValidity();
+        return;
     }
 }
 
 // функция для проверки ввода
 function checkMatrix() {
     const size = Number.parseInt(document.getElementById('matrix_size').value);  // получение размерности матрицы
-    let sum = 0;  // объявление переменной для хранения суммы значений ячеек строки
+    let sum=0;  // объявление переменной для хранения суммы значений ячеек строки
     for (let i = 0; i < size; i++) {
         sum = 0;  // обнуление суммы
         for (let j = 0; j < size; j++) {
-            sum += Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value);  // добавление значения ячейки к сумме
-            // проверка на то, что матрица симметрична
             let cell1 = document.getElementById(`matrix[${i}][${j}]`).value;
             let cell2 = document.getElementById(`matrix[${j}][${i}]`).value;
-            if (cell1 != "" && cell2!="") {
-                if (Number.parseInt(cell1) != Number.parseInt(cell2)) {
-                    alert("Ошибка 1");
-                    return false;
-                }
-            }
-            // проверка на то, что значения по диагонали равны не нулю
-            else if (Number.parseInt(document.getElementById(`matrix[${i}][${i}]`).value) != 0){
-                alert("Ошибка 2");
+            // проверка на ввод отрицательных чисел
+            if (Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value) < 0) {
+                document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('Можно вводить только целые положительные числа');
+                document.getElementById(`matrix[${i}][${j}]`).reportValidity();
                 return false;
             }
+            // проверка на то, что матрица симметрична
+            else if (cell1 != "" && cell2!="") {
+                if (Number.parseInt(cell1) != Number.parseInt(cell2)) {
+                    alert(`Матрица несимметрична\nЗначения ${j+1}-й ячейки ${i+1}-й строки и ${i+1}-й ячейки ${j+1}-й строки не совпадают`);
+                    return false;
+                }
+            }else {
+                document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('');
+            }
+            sum += Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value)|0;  // добавление значения ячейки к сумме
         }
         // проверка на то, что все ячейки в строке равны нулю
         if (sum == 0) {
-            alert("Ошибка 3");
+            alert(`Ошибка: в строке номер ${i + 1} все ячейки равны 0`);
             return false;
+        }
+        // проверка на то, что значения по диагонали равны не нулю
+        else if (Number(document.getElementById(`matrix[${i}][${i}]`).value) != 0) {
+            document.getElementById(`matrix[${i}][${i}]`).setCustomValidity('Значение ячейки должно быть равно 0');
+            document.getElementById(`matrix[${i}][${i}]`).reportValidity();
+            return false;
+        } else {
+            document.getElementById(`matrix[${i}][${i}]`).setCustomValidity('');
         }
     }
     // проверка существования поля ввода стартовой позиции
@@ -109,8 +125,11 @@ function checkMatrix() {
         const startPointId = Number.parseInt(document.getElementById('start_point').value);  // получение значения стартовой позиции
         // обработка ситуации, когда стартовая позиция больше количества вершин
         if (startPointId > size) {
-            alert('Ошибка 4');
+            document.getElementById('start_point').setCustomValidity('Значение не должно превышать количество вершин');
+            document.getElementById('start_point').reportValidity();
             return false;
+        } else {
+            document.getElementById('start_point').setCustomValidity('');
         }
     }
 }

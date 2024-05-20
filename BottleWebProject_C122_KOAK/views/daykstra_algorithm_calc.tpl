@@ -10,7 +10,7 @@
                 <label class="daystarLabel" for="start_point">Начальная вершина</label>
                 <input type="number" title="Целое число от 1 до количества вершин" class="form-control" id="start_point" name="start_point" min="1" max="10" required/>
             </div>
-            <button type="button" class="btn btn-primary" onclick="createMatrix()">Создать матрицу</button>
+            <button type="button" id="create-matrix-button" class="btn btn-primary" onclick="createMatrix()">Создать матрицу</button>
              <div id="matrixContainer"></div>
         </form>
 </div>

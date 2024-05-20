@@ -15,7 +15,7 @@ function createMatrix() {
             const emptyCell = document.createElement('th');  // создание ячейки для заголовочной строки
             headerRow.appendChild(emptyCell);  // добавление ячейки в строку с заголовками
 
-            for (let j = 1; j <= size; j++) {  
+            for (let j = 1; j <= size; j++) {
                 const headerCell = document.createElement('th');  // создание ячейки заголовка
                 headerCell.textContent = j;  // запись номера вершины в созданную ячейку
                 headerRow.appendChild(headerCell);  // добавление созданной ячейки в заголовочную строку
@@ -58,6 +58,14 @@ function createMatrix() {
             table.appendChild(tbody);  // добавление тела в таблицу
             container.appendChild(table);  // добавление таблицы в контейнер
 
+            const generatorButton = document.createElement('button');  // создание кнопки для генератора
+            // установка атрибутов для кнопки
+            generatorButton.type = 'button';
+            generatorButton.classList.add('btn', 'btn-primary');
+            generatorButton.textContent = 'Сгенерировать матрицу';
+            generatorButton.onclick = generationMatrix;
+            generatorButton.id = 'generator-button';
+
             const submitButton = document.createElement('button');  // объявление кнопки для перехода к решению
             // добавление атрибутов кнопке
             submitButton.type = 'submit';
@@ -65,6 +73,7 @@ function createMatrix() {
             submitButton.textContent = 'Рассчитать';
             submitButton.onclick = checkMatrix;
 
+            container.appendChild(generatorButton);
             container.appendChild(submitButton);  // добавление кнопки в контейнер
             document.getElementById('matrix_size').setCustomValidity('');
         }
@@ -84,9 +93,9 @@ function createMatrix() {
 // функция для проверки ввода
 function checkMatrix() {
     const size = Number.parseInt(document.getElementById('matrix_size').value);  // получение размерности матрицы
-    let sum=0;  // объявление переменной для хранения суммы значений ячеек строки
+    let sum = 0;  // объявление переменной для хранения суммы значений ячеек строки
     for (let i = 0; i < size; i++) {
-        sum = 0;  // обнуление суммы
+        sum = 0;
         for (let j = 0; j < size; j++) {
             let cell1 = document.getElementById(`matrix[${i}][${j}]`).value;
             let cell2 = document.getElementById(`matrix[${j}][${i}]`).value;
@@ -97,15 +106,15 @@ function checkMatrix() {
                 return false;
             }
             // проверка на то, что матрица симметрична
-            else if (cell1 != "" && cell2!="") {
+            else if (cell1 != "" && cell2 != "") {
                 if (Number.parseInt(cell1) != Number.parseInt(cell2)) {
-                    alert(`Матрица несимметрична\nЗначения ${j+1}-й ячейки ${i+1}-й строки и ${i+1}-й ячейки ${j+1}-й строки не совпадают`);
+                    alert(`Матрица несимметрична\nЗначения ${j + 1}-й ячейки ${i + 1}-й строки и ${i + 1}-й ячейки ${j + 1}-й строки не совпадают`);
                     return false;
                 }
-            }else {
+            } else {
                 document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('');
             }
-            sum += Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value)|0;  // добавление значения ячейки к сумме
+            sum += Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value) | 0;  // добавление значения ячейки к сумме
         }
         // проверка на то, что все ячейки в строке равны нулю
         if (sum == 0) {
@@ -133,4 +142,31 @@ function checkMatrix() {
             document.getElementById('start_point').setCustomValidity('');
         }
     }
+
+}
+
+// функция генератора
+function generationMatrix() {
+    const size = Number.parseInt(document.getElementById('matrix_size').value);  // получение размерности матрицы
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            // установка для элементов по диагонали значений 0
+            if (i == j) {
+                document.getElementById(`matrix[${i}][${j}]`).value = 0;
+            }
+            // реализация симметричности матрицы
+            else if (i > j) {
+                document.getElementById(`matrix[${i}][${j}]`).value = document.getElementById(`matrix[${j}][${i}]`).value;
+            }
+            // заполнение случайными числами
+            else if (i < j) {
+                document.getElementById(`matrix[${i}][${j}]`).value = getRandomInt(20);
+            }
+        }
+    }
+}
+
+// функция для генерации числа
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
 }

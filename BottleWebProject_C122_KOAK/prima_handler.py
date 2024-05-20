@@ -25,7 +25,7 @@ def getResult():
     
     edge_list, mst = prim_mst(matrix)  # вызов метода для нахождения mst и суммарного веса mst
 
-    save_history.createhistory("Prima", [edge_list, mst]) # вызов метода для сохранения в историю исходных данных и результата
+    save_history.createhistory("Prima", [matrix.tolist(), edge_list, mst]) # вызов метода для сохранения в историю исходных данных и результата
     
 
     createGraph.createGraph(matrix, edge_list)  # создание нового графа

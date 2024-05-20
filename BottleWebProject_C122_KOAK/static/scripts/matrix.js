@@ -35,6 +35,7 @@ function createMatrix() {
                 for (let j = 0; j < size; j++) {
                     const cell = document.createElement('td');  // создание ячейки
                     const input = document.createElement('input');  // создание поля для ввода веса ребра
+                    input.title = 'Целое положительное число';
                     input.type = 'number';  //  указание, что поле ввода будет числового типа
                     // удаляем возможность ввести минус в поле ввода
                     input.onkeydown = function (event) {

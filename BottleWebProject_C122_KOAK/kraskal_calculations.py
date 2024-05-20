@@ -100,7 +100,7 @@ def getResult():
     result, mst = kraskal(matrix)
     
     # Сохраняем исходные данные и результат работы метода
-    save_history.createhistory("Kraskala", [result, mst])
+    save_history.createhistory("Kraskala", [matrix.tolist(), result, mst])
 
     # Создаем граф и получаем результат работы алгоритма Краскала
     createGraph.createGraph(matrix, result)

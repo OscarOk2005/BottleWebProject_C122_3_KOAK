@@ -3,6 +3,7 @@ from datetime import datetime
 import numpy as np
 import createGraph
 import save_history
+import math
 
 @post('/daykstra_result', method='POST')
 def getResult():
@@ -15,15 +16,16 @@ def getResult():
         for j in range(size):
              # Проверяем, что значение было введено
             if request.forms.get('matrix[%i][%i]'%(i, j)) == "":
-                # Если не была введено значение между вершинами - присваиваем -1
+                # Если не была введено значение между вершинами - присваиваем бесконечности
                 if(i != j):
-                    old_matrix[i, j] = -1
+                    old_matrix[i, j] = math.inf
                 # Иначе - 0
                 else:
                     old_matrix[i, j] = 0
             else:
                 # Получение данных
                 old_matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+   
     # Получение начальной точки
     start_node = int(request.forms.get('start_point')) - 1
     # Получение списка расстояний от указаной точки до других

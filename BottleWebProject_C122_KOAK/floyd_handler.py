@@ -3,6 +3,7 @@ from datetime import datetime
 import numpy as np
 import createGraph
 import save_history
+import math
 
 @post('/floyd_result', method='POST')
 def getResult():
@@ -17,7 +18,16 @@ def getResult():
     # Заполняет матрицу значениями из формы 
     for i in range(size):
         for j in range(size):
-            matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
+            if request.forms.get('matrix[%i][%i]'%(i, j)) == "":    
+            # Если не была введено значение между вершинами - присваиваем бесконечность
+                if(i != j):
+                    matrix[i, j] = math.inf
+                # Иначе - 0
+                else:
+                    matrix[i, j] = 0
+            else:
+                # Получение данных
+                matrix[i, j] = int(request.forms.get('matrix[%i][%i]'%(i, j)))
     # Создаёт массив из начальной и итоговой матрицы для сохранения в историю
     savedata = [matrix.tolist(), floydmethod(matrix).tolist()]
     # Вычисляет кратчайшие расстояния между всеми парами вершин

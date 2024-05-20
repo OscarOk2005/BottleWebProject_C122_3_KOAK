@@ -97,11 +97,17 @@ function checkMatrix() {
     for (let i = 0; i < size; i++) {
         sum = 0;
         for (let j = 0; j < size; j++) {
+            document.getElementById(`matrix[${i}][${i}]`).setCustomValidity('');
             let cell1 = document.getElementById(`matrix[${i}][${j}]`).value;
             let cell2 = document.getElementById(`matrix[${j}][${i}]`).value;
             // проверка на ввод отрицательных чисел
             if (Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value) < 0) {
                 document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('Можно вводить только целые положительные числа');
+                document.getElementById(`matrix[${i}][${j}]`).reportValidity();
+                return false;
+            }
+            else if (Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value) > 150) {
+                document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('Можно вводить целые числа из диапазона [0; 150]');
                 document.getElementById(`matrix[${i}][${j}]`).reportValidity();
                 return false;
             }
@@ -111,8 +117,6 @@ function checkMatrix() {
                     alert(`Матрица несимметрична\nЗначения ${j + 1}-й ячейки ${i + 1}-й строки и ${i + 1}-й ячейки ${j + 1}-й строки не совпадают`);
                     return false;
                 }
-            } else {
-                document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('');
             }
             sum += Number.parseInt(document.getElementById(`matrix[${i}][${j}]`).value) | 0;  // добавление значения ячейки к сумме
         }
@@ -126,9 +130,7 @@ function checkMatrix() {
             document.getElementById(`matrix[${i}][${i}]`).setCustomValidity('Значение ячейки должно быть равно 0');
             document.getElementById(`matrix[${i}][${i}]`).reportValidity();
             return false;
-        } else {
-            document.getElementById(`matrix[${i}][${i}]`).setCustomValidity('');
-        }
+        } 
     }
     // проверка существования поля ввода стартовой позиции
     if (document.getElementById('start_point') != null) {

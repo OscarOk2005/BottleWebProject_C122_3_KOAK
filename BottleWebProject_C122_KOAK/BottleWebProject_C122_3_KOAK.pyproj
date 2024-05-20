@@ -20,6 +20,7 @@
     <Name>BottleWebProject_C122_3_KOAK</Name>
     <RootNamespace>BottleWebProject_C122_KOAK</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,6 +47,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="save_history.py" />
+    <Compile Include="test_prima_algorithm.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\images\" />

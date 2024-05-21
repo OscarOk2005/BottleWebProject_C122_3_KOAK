@@ -97,7 +97,7 @@ function checkMatrix() {
     for (let i = 0; i < size; i++) {
         sum = 0;
         for (let j = 0; j < size; j++) {
-            document.getElementById(`matrix[${i}][${i}]`).setCustomValidity('');
+            document.getElementById(`matrix[${i}][${j}]`).setCustomValidity('');
             let cell1 = document.getElementById(`matrix[${i}][${j}]`).value;
             let cell2 = document.getElementById(`matrix[${j}][${i}]`).value;
             // проверка на ввод отрицательных чисел

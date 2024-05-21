@@ -53,6 +53,7 @@
     <Compile Include="test_prima_sum_mst.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_DaykstraMethod.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\images\" />

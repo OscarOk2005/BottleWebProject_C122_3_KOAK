@@ -50,6 +50,9 @@
     <Compile Include="test_prima_algorithm.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="test_prima_sum_mst.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="static\images\" />

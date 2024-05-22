@@ -162,7 +162,11 @@ th {
     border-color: #428bca !important;
 }
 
-#color_white {
+#about-page {
+    color: white !important;
+}
+
+#home-page {
     color: white !important;
 }
 

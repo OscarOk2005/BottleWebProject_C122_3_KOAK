@@ -18,7 +18,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand" id="color_white">GraphX</a>
+                <a href="/" id="home-page">GraphX</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -40,7 +40,7 @@
                             <li><a href="/kraskal_algorithm_calc">Алгоритм Краскала</a></li>
                         </ul>
                     </li>
-                    <li><a href="/about" id="color_white">Об авторах</a></li>
+                    <li><a href="/about" id="about-page">Об авторах</a></li>
                 </ul>
             </div>
         </div>

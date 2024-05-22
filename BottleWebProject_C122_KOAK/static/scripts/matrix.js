@@ -72,6 +72,7 @@ function createMatrix() {
             submitButton.classList.add('btn', 'btn-primary', 'mt-3');
             submitButton.textContent = 'Рассчитать';
             submitButton.onclick = checkMatrix;
+            submitButton.id = 'submit-button';
 
             container.appendChild(generatorButton);
             container.appendChild(submitButton);  // добавление кнопки в контейнер

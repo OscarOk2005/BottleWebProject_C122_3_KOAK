@@ -132,6 +132,6 @@
       воспользуйтесь нашим калькулятором:
     </p>
 
-    <a href="/prima_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
+    <a id="floyd-calc-button" href="/prima_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
   </div>
 </div>

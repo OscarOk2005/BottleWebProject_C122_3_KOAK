@@ -180,6 +180,6 @@
       Если вы хотите протестировать метод Дейкстры на своем примере,
       воспользуйтесь нашим калькулятором:
     </p>
-    <a href="daykstra_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
+    <a id="daykstra-calc-button" href="daykstra_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
   </div>
 </div>

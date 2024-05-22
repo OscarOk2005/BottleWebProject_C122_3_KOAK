@@ -70,9 +70,12 @@ class Test_test_prima_sum_mst(unittest.TestCase):
         [[1, 1, 0, 0],
          [1, 0, 1, 0],
          [0, 1, 1, 1],
-         [0, 0, 1, 0]]
+         [0, 0, 1, 0]],
+         
+         [[0, 1],
+         [1, 0]]
          ]
-        results=[0, math.inf, 3, math.inf, 3]
+        results=[0, math.inf, 3, math.inf, 3, 1]
         
         for matrix, result in zip(matrices, results):
             self.assertEquals(prima_handler.prim_mst(matrix)[1], result, msg=f'Test faild with matrix: {matrix}')

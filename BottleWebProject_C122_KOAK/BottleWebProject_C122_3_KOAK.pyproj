@@ -21,6 +21,7 @@
     <RootNamespace>BottleWebProject_C122_KOAK</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
     <TestFramework>unittest</TestFramework>
+    <WebBrowserPort>666</WebBrowserPort>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,10 +48,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="save_history.py" />
-    <Compile Include="test_kraskal_edge_list.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test_kraskal_sum_mst.py">
+    <Compile Include="test_floyda_algorithm.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="test_prima_edge_list.py" />

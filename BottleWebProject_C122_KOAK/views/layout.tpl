@@ -18,29 +18,29 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand" id="color_white">GraphX</a>
+                <a href="/" class="navbar-brand" id="home-page">GraphX</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Теория<span class="caret"></span></a>
+                        <a href="#" id="nav-a-theory" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Теория<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/prima_algorithm_theory">Алгоритм Прима</a></li>
-                            <li><a href="/daykstra_algorithm_theory">Алгоритм Дейкстры</a></li>
-                            <li><a href="/floyd_algorithm_theory">Алгоритм Флойда</a></li>
-                            <li><a href="/kraskal_algorithm_theory">Алгоритм Краскала</a></li>
+                            <li><a id="theory-prim" href="/prima_algorithm_theory">Алгоритм Прима</a></li>
+                            <li><a id="theory-daykstra" href="/daykstra_algorithm_theory">Алгоритм Дейкстры</a></li>
+                            <li><a id="theory-floyd" href="/floyd_algorithm_theory">Алгоритм Флойда</a></li>
+                            <li><a id="theory-kraskal" href="/kraskal_algorithm_theory">Алгоритм Краскала</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Калькулятор<span class="caret"></span></a>
+                        <a href="#" id="nav-a-calc" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Калькулятор<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/prima_algorithm_calc">Алгоритм Прима</a></li>
-                            <li><a href="/daykstra_algorithm_calc">Алгоритм Дейкстры</a></li>
-                            <li><a href="/floyd_algorithm_calc">Алгоритм Флойда</a></li>
-                            <li><a href="/kraskal_algorithm_calc">Алгоритм Краскала</a></li>
+                            <li><a id="calc-prim" href="/prima_algorithm_calc">Алгоритм Прима</a></li>
+                            <li><a id="calc-daykstra" href="/daykstra_algorithm_calc">Алгоритм Дейкстры</a></li>
+                            <li><a id="calc-floyd" href="/floyd_algorithm_calc">Алгоритм Флойда</a></li>
+                            <li><a id="calc-kraskal" href="/kraskal_algorithm_calc">Алгоритм Краскала</a></li>
                         </ul>
                     </li>
-                    <li><a href="/about" id="color_white">Об авторах</a></li>
+                    <li><a href="/about" id="about-page">Об авторах</a></li>
                 </ul>
             </div>
         </div>

@@ -48,6 +48,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="save_history.py" />
+    <Compile Include="test_floyda_algorithm.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="test_prima_edge_list.py" />
     <Compile Include="test_prima_sum_mst.py">
       <SubType>Code</SubType>

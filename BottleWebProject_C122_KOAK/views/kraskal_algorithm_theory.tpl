@@ -176,6 +176,6 @@
       Если вы хотите протестировать алгоритм Прима на своем примере,
       воспользуйтесь нашим калькулятором:
     </p>
-    <a id="kraskal-calc-button" href="/kraskal_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
+    <a href="/kraskal_algorithm_calc" class="btn btn-primary" id="kraskal-calc-button">Открыть калькулятор</a>
   </div>
 </div>

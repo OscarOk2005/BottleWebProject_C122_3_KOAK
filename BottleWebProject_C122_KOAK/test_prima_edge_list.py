@@ -73,10 +73,13 @@ class Test_test_prima_edge_list(unittest.TestCase):
         [[1, 1, 0, 0],
          [1, 0, 1, 0],
          [0, 1, 1, 1],
-         [0, 0, 1, 0]]
+         [0, 0, 1, 0]],
+         
+         [[0, 1],
+         [1, 0]]
          ]
         results=[[], [(1,2), (1,2), (1,2)], [(1,2), (1,3), (2, 4)], [(1, 2), (2, 3), (2, 3), (2, 3)],
-              [(1, 2), (2, 3), (3, 4)]]
+              [(1, 2), (2, 3), (3, 4)], [(1, 2)]]
         
         for matrix, result in zip(matrices, results):
             self.assertEquals(prima_handler.prim_mst(matrix)[0], result, msg=f'Test faild with matrix: {matrix}')
@@ -107,5 +110,7 @@ class Test_test_prima_edge_list(unittest.TestCase):
                 pass
             except Exception as e:
                 self.fail(f'Test faild with matrix {matrix}. Got {e.__class__.__name__} instead of {result.__name__}.')
+            else:
+                self.fail(f'Test faild with matrix {matrix}: the exception was not caused')
 if __name__ == '__main__':
     unittest.main()

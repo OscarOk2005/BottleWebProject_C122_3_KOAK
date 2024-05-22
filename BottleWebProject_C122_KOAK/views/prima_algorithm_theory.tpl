@@ -170,6 +170,6 @@
       Если вы хотите протестировать алгоритм Прима на своем примере,
       воспользуйтесь нашим калькулятором:
     </p>
-    <a href="/prima_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
+    <a id="prim-calc-button" href="/prima_algorithm_calc" class="btn btn-primary">Открыть калькулятор</a>
   </div>
 </div>
